@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400");
+
+.social-links {
+  display: flex;
+  justify-content: start;
+  position: relative;
+}
+
+.social-links li {
+  list-style: none;
+  margin: 0 5px;
+}
+
+.social-links li a .fa {
+  font-size: 40px;
+  color: #262626;
+  line-height: 80px;
+  transition: 0.5s;
+  padding-right: 14px;
+}
+
+.social-links li a span {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 30px;
+  color: #262626;
+  letter-spacing: 3px;
+  transition: 0.5s;
+}
+
+.social-links li a {
+  text-decoration: none;
+  display: block;
+  width: 210px;
+  height: 80px;
+  background: #fff;
+  text-align: left;
+  padding-left: 20px;
+  transform: rotate(-30deg) skew(25deg) translate(0, 0);
+  transition: 0.5s;
+  box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.social-links li a:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  height: 100%;
+  width: 20px;
+  background: #b1b1b1;
+  transform: rotate(0deg) skewY(-45deg);
+  transition: 0.5s;
+}
+
+.social-links li a:after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+  height: 20px;
+  width: 100%;
+  background: #b1b1b1;
+  transform: rotate(0deg) skewX(-45deg);
+  transition: 0.5s;
+}
+
+.social-links li a:hover {
+  transform: rotate(-30deg) skew(25deg) translate(20px, -15px);
+  box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
+}
+
+.social-links li:hover .fa {
+  color: #fff;
+}
+
+.social-links li:hover span {
+  color: #fff;
+}
+
+.social-links li:hover:nth-child(1) a {
+  background: #3b5998;
+}
+
+.social-links li:hover:nth-child(1) a:before {
+  background: #365492;
+}
+
+.social-links li:hover:nth-child(1) a:after {
+  background: #4a69ad;
+}
+
+.social-links li:hover:nth-child(2) a {
+  background: #00aced;
+}
+
+.social-links li:hover:nth-child(2) a:before {
+  background: #097aa5;
+}
+
+.social-links li:hover:nth-child(2) a:after {
+  background: #53b9e0;
+}
+
+.social-links li:hover:nth-child(3) a {
+  background: #e4405f;
+}
+
+.social-links li:hover:nth-child(3) a:before {
+  background: #d81c3f;
+}
+
+.social-links li:hover:nth-child(3) a:after {
+  background: #e46880;
+}

@@ -1,0 +1,11 @@
+.card-container {
+  display: flex;
+  justify-content: center; /* Yatayda ortalama */
+  align-items: center; /* Dikeyde ortalama */
+  height: 100vh; /* Yüksekliği viewport'un tamamı yaparak tam merkezleme */
+  font-size: 1.1rem;
+  line-height: 1.2;
+  background-color: #000;
+  color: #ddd;
+  margin-top: 1rem;
+}
