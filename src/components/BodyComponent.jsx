@@ -8,9 +8,7 @@ import "../assets/styles/BodyComponent.css";
 export const BodyComponent = () => {
   return (
     <div className="body-container">
-      <div className="card-container">
-        <CardComponent />
-      </div>
+      <CardComponent />
     </div>
   );
 };

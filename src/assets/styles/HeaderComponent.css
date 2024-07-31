@@ -5,73 +5,86 @@
   background-color: rgba(0, 0, 0, 1);
   position: relative;
   z-index: 10;
-
-  .logo {
-    margin-left: 2rem;
-  }
-
-  img {
-    width: 50px;
-    height: 50px;
-    margin: 1rem;
-  }
-
-  .buttons {
-    display: flex;
-    gap: 3rem;
-    margin-left: auto;
-    margin-right: 10vh;
-
-    a {
-      padding: 1rem;
-      font-size: 1.25rem;
-      color: white;
-      text-decoration: none;
-      position: relative;
-      transition: transform 0.5s ease, border-bottom 0.3s ease-in-out;
-
-      &:before {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: orangered;
-        visibility: hidden;
-        transition: width 0.3s ease-in-out, visibility 0.3s ease-in-out;
-      }
-
-      &:hover {
-        transform: scale(1.4);
-      }
-
-      &:hover:before,
-      &.active:before {
-        visibility: visible;
-        width: 100%;
-      }
-    }
-  }
 }
 
-/* @media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-  }
+.logo {
+  margin-left: 2rem;
+}
 
-  .buttons {
-    margin: 0;
-    gap: 1rem;
-    flex-direction: column;
-    width: 100%;
-  }
+img {
+  width: 50px;
+  height: 50px;
+  margin: 1rem;
+}
 
-  .buttons a {
-    padding: 0.5rem;
-    font-size: 1rem;
-    text-align: left;
-  }
-} */
+.buttons {
+  display: flex;
+  gap: 3rem;
+  margin-left: auto;
+  margin-right: 10vh;
+}
+
+.buttons a,
+.dropdown {
+  padding: 1rem;
+  font-size: 1.25rem;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: transform 0.5s ease, border-bottom 0.3s ease-in-out;
+}
+
+.buttons a:before,
+.dropdown-link:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: orangered;
+  visibility: hidden;
+  transition: width 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.buttons a:hover,
+.dropdown-link:hover {
+  transform: scale(1.4);
+}
+
+.buttons a:hover:before,
+.buttons a.active:before,
+.dropdown-link:hover:before {
+  visibility: visible;
+  width: 100%;
+}
+
+.dropdown {
+  color: white;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  background-color: #f9f9f9;
+  width: auto;
+  white-space: nowrap;
+  padding: 12px 0;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}

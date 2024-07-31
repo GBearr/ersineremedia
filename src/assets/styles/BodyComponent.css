@@ -1,11 +1,23 @@
-.card-container {
+.body-container {
   display: flex;
-  justify-content: center; /* Yatayda ortalama */
-  align-items: center; /* Dikeyde ortalama */
-  height: 100vh; /* Yüksekliği viewport'un tamamı yaparak tam merkezleme */
+  justify-content: center;
+  align-items: center;
+  min-height: calc(
+    100vh - 35vh
+  ); /* Footer yüksekliğini hesaba katarak minimum yükseklik ayarı */
   font-size: 1.1rem;
   line-height: 1.2;
   background-color: #000;
   color: #ddd;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  overflow: hidden; /* Taşmayı önlemek için eklendi */
+  padding: 1rem; /* İçeriği daha iyi sığdırmak için eklendi */
+  box-sizing: border-box; /* Padding ve border'ın toplam genişliğe dahil edilmesi için eklendi */
+}
+
+/* Responsive ayarlamalar */
+@media (max-width: 768px) {
+  .body-container {
+    padding: 0.5rem; /* Küçük ekranlarda daha az padding */
+  }
 }
